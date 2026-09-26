@@ -21,7 +21,7 @@ export default function NewPatientPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const { error } = await createPatient(form);
+const { error } = await createPatient(form as any);
     setLoading(false);
     if (error) {
       console.warn("Demo mode:", error);
